@@ -12,7 +12,7 @@ func Simulate(fishes map[int]int, days int) int {
 		draft := cloneMap(fishes)
 		for age, count := range fishes {
 			draft[age] -= count
-			if age-1 == -1 {
+			if age == 0 {
 				draft[6] += count
 				draft[8] += count
 			} else {
